@@ -3,8 +3,6 @@
     src: url("./fonts/RibeyeMarrow-Regular.ttf");
 }
 
-
-
 *{
     margin: 0;
     padding: 0;
@@ -59,41 +57,34 @@ html, body {
  
 .btn-menu > .fa-bars{display: none;}
 
-/*Nosotros*/
-
-.contenedor-sobre-nosotros{
-    display: flex;
+/*Clientes*/   
+.cards{
+    display:flex;
     justify-content: space-evenly;
     padding-bottom: 3%;}
+    
+.cards .card{
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);}
 
-.imagen-sobre-nosotros{width: 20%;}
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid white;
+    display: block;}
 
-.sobre-nosotros .contenido-textos{width: 48%;}
+.cards .card > .texto-card{
+    width: 60%;
+    padding-bottom: 1.5rem;
+    font-family: 'Oxanium',sans-serif ;}
 
-.contenido-textos h3 span{
-    background: #551536;
-    color: white;
-    border-radius: 58%;
-    display: inline-block;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-    margin-right: 5px;
-    font-family: 'Oxanium';}
-
-.contenido-textos p{
-    padding: 0px 0px 30px 15px;
-    font-weight: 300;
-    text-align: justify;}
-
-.titulo{
-    color: rgb(189, 17, 114);
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 40px;
-    padding-top: 1rem;
-    font-family: 'Nunito Sans';}
 /*footer*/
 footer{
     width: 100%;
@@ -112,3 +103,21 @@ footer p{
     font-weight: bold;
     opacity: .8;
     font-size: 1rem;}
+
+
+    
+/*moviles*/
+@media screen and (max-width:480px){
+    #header{
+        width: 70%;
+    }
+    .card{
+        width: 80%;
+    }
+    .cards .card img{
+        width: 40%;
+    }
+    .texto-card{
+        width: 60%;
+    }
+}

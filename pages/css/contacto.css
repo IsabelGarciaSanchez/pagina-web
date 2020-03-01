@@ -1,3 +1,7 @@
+@font-face{
+    font-family:"Ribeye Marrow";
+    src: url("./fonts/RibeyeMarrow-Regular.ttf");
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,11 +11,13 @@ html, body {
 	margin: 0;
 	padding: 0;
     background-color: rgba(102, 34, 68, 0.644);
-    font-family: 'Spartan';}
+    font-family: sans-serif;
+}
 /*menu*/ 
 #header{
     position: relative;
     width: 100%;
+    font-family: 'Ribeye Marrow', sans-serif;
 }  
 .menu{
     position: fixed;
@@ -93,7 +99,8 @@ footer{
     background-color: #af609d;
     box-shadow: 0 -1px 6px rgba(0,0,0,.6);
     align-items: center;
-    display: flex;}
+    display: flex;
+    font-family: 'Ribeye Marrow', sans-serif;}
 footer p{
     width: 100%;
     text-align: center;

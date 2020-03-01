@@ -1,105 +1,345 @@
+@font-face{
+    font-family:"Ribeye Marrow";
+    src: url("./fonts/RibeyeMarrow-Regular.ttf");
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;}
 
 html, body {
+    height: 100%;
+    width: 100%;
 	margin: 0;
-	padding: 0;
+	padding-top: 40px;
     background-color: rgba(102, 34, 68, 0.644);
-    font-family: 'Spartan';}
-/*menu*/ 
-#header{
-    position: relative;
-    width: 100%;
-}  
-.menu{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #FFD6EA;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 999 ;}
+    font-family: sans-serif;}
 
-.menu .logo-box{margin-left: 20px;}
 
-.menu .logo-box img{
-    width: 30%;
-    height: auto;}
+    /*Media ordenador */
+    @media (min-width: 1024px) {
+        /*menu*/ 
+        #header{
+            position: relative;
+            width: 100%;
+            font-family: 'Ribeye Marrow', sans-serif;
+        }  
+        .menu{
+            position: fixed;
+            top: 0;
+            left: 0;
+            
+            width: 100%;
+            height: 60px;
+            background-color: #FFD6EA;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999 ;}
 
-.menu .list-container{margin-left: 28px;}
-.menu .list-container .lists{display: flex;}
-.menu .list-container .lists li{list-style: none;}
-.menu .list-container .lists li a {
-                                text-decoration: none;
-                                margin: 0px 10px;
-                                padding:8px;
-                                color: rgba(44, 10, 27, 0.637);
-                                background-color: rgba(211, 113, 162, 0.637) ;
-                                border-radius: 25px;
-                                font-size: 25px;
-                                transition: 0.3;}
+        .clientes{
+            margin-top: 60px;
+            padding: 20px;
+        }
 
- .menu .list-container .lists li a.activo{background: rgba(233, 0, 116, 0.637);}
+        .menu .logo-box{margin-left: 20px;}
 
- .menu .list-container .lists li a:hover{background: rgba(233, 0, 116, 0.637);}
+        .menu .logo-box img{
+            width: 30%;
+            height: auto;}
 
- 
-.btn-menu > .fa-bars{display: none;}
-/*Clientes*/
-.titulo{
-    color: rgb(189, 17, 114);
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 40px;
-    padding-top: 1rem;
-    font-family: 'Nunito Sans';}
+        .menu .list-container{margin-left: 28px;}
+        .menu .list-container .lists{display: flex;}
+        .menu .list-container .lists li{list-style: none;}
+        .menu .list-container .lists li a {
+                                        text-decoration: none;
+                                        margin: 0px 10px;
+                                        padding:8px;
+                                        color: rgba(44, 10, 27, 0.637);
+                                        background-color: rgba(211, 113, 162, 0.637) ;
+                                        border-radius: 25px;
+                                        font-size: 25px;
+                                        transition: 0.3;}
+
+        .menu .list-container .lists li a.activo{background: rgba(233, 0, 116, 0.637);}
+
+        .menu .list-container .lists li a:hover{background: rgba(233, 0, 116, 0.637);}
+
+        
+        .btn-menu > .fa-bars{display: none;}
+
+        /*Clientes*/   
+        .cards{
+            display:flex;
+            justify-content: space-evenly;
+            padding-bottom: 3%;}
+            
+        .cards .card{
+            background: #4d0686;
+            display: flex;
+            width: 46%;
+            height: 200px;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.6);}
+
+        .cards .card img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid white;
+            display: block;}
+
+        .cards .card > .texto-card{
+            width: 60%;
+            padding-bottom: 1.5rem;
+            font-family: 'Oxanium',sans-serif ;}
+
+        /*footer*/
+        footer{
+            position: fixed;
+            width: 100%;
+            height: 15%;
+            bottom: 0;
+            background-color: #af609d;
+            box-shadow: 0 -1px 6px rgba(0,0,0,.6);
+            align-items: center;
+            display: flex;
+            font-family: 'Ribeye Marrow', sans-serif;}
+
+        footer p{
+            width: 100%;
+            text-align: center;
+            color: ghostwhite;
+            font-weight: bold;
+            opacity: .8;
+            font-size: 1rem;
+        }
+    }
+
+    /* Media tablet */ 
+    @media (min-width: 481px) and (max-width: 1023px){
+        /*menu*/ 
+        #header{
+            position: relative;
+            width: 100%;
+            font-family: 'Ribeye Marrow', sans-serif;
+        }  
+        .menu{
+            position: fixed;
+            top: 0;
+            left: 0;
+            
+            width: 100%;
+            height: 50px;
+            background-color: #FFD6EA;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999 ;}
+
+        .menu .logo-box{margin-left: 20px;}
+
+        .menu .logo-box img{
+            width: 70%;
+            height: auto;
+        }
+
+        .menu .list-container{margin-left: 28px;}
+        .menu .list-container .lists{display: flex;}
+        .menu .list-container .lists li{list-style: none;}
+        .menu .list-container .lists li a {
+                                        text-decoration: none;
+                                        margin: 0px 2px;
+                                        padding:5px;
+                                        color: rgba(44, 10, 27, 0.637);
+                                        background-color: rgba(211, 113, 162, 0.637) ;
+                                        border-radius: 25px;
+                                        font-size: 7px;
+                                        transition: 0.3;}
+
+        .menu .list-container .lists li a.activo{background: rgba(233, 0, 116, 0.637);}
+
+        .menu .list-container .lists li a:hover{background: rgba(233, 0, 116, 0.637);}
+
+        
+        .btn-menu > .fa-bars{display: none;}
+
+        /*Clientes*/  
+        .clientes{
+            height: 100%;
+        }
+        
+        .cards{
+            display:inline-block;
+            align-content: center;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+            
+        .cards .card{
+            padding: 10px;
+            margin: 10px auto;
+            background: #4d0686;
+            display: flex;
+            width: 60%;
+            height: 175px;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.6);
+        }
+
+        .cards .card img{
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border: 3px solid white;
+            display: block;
+            margin: 3px;
+        }
+
+        .texto-card{
+            padding: 2%;
+            font-family: 'Oxanium',sans-serif ;
+            font-size: 10px;
+        }
+
+        /*footer*/
+        footer{
+            position: fixed;
+            width: 100%;
+            height: 15%;
+            bottom: 0;
+            background-color: #af609d;
+            box-shadow: 0 -1px 6px rgba(0,0,0,.6);
+            align-items: center;
+            display: flex;
+            font-family: 'Ribeye Marrow', sans-serif;}
+
+        footer p{
+            width: 100%;
+            text-align: center;
+            color: ghostwhite;
+            font-weight: bold;
+            opacity: .8;
+            font-size: 1rem;
+        }
+    }
+
+    /* Media movil */
+    @media (max-width: 480px) {
+        /*menu*/ 
+        #header{
+            position: relative;
+            width: 100%;
+            font-family: 'Ribeye Marrow', sans-serif;
+        }  
+        .menu{
+            position: fixed;
+            top: 0;
+            left: 0;
+            
+            width: 100%;
+            height: 50px;
+            background-color: #FFD6EA;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999 ;}
+
+        .menu .logo-box{margin-left: 20px;}
+
+        .menu .logo-box img{
+            width: 70%;
+            height: auto;
+        }
+
+        .menu .list-container{margin-left: 28px;}
+        .menu .list-container .lists{display: flex;}
+        .menu .list-container .lists li{list-style: none;}
+        .menu .list-container .lists li a {
+                                        text-decoration: none;
+                                        margin: 0px 2px;
+                                        padding:5px;
+                                        color: rgba(44, 10, 27, 0.637);
+                                        background-color: rgba(211, 113, 162, 0.637) ;
+                                        border-radius: 25px;
+                                        font-size: 7px;
+                                        transition: 0.3;}
+
+        .menu .list-container .lists li a.activo{background: rgba(233, 0, 116, 0.637);}
+
+        .menu .list-container .lists li a:hover{background: rgba(233, 0, 116, 0.637);}
+
+        
+        .btn-menu > .fa-bars{display: none;}
+
+        /*Clientes*/  
+        .clientes{
+            height: 100%;
+        }
+        
+        .cards{
+            display:inline-block;
+            align-content: center;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+            
+        .cards .card{
+            padding: 10px;
+            margin: 10px auto;
+            background: #4d0686;
+            display: flex;
+            width: 60%;
+            height: 175px;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.6);
+        }
+
+        .cards .card img{
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border: 3px solid white;
+            display: block;
+            margin: 3px;
+        }
+
+        .texto-card{
+            padding: 2%;
+            font-family: 'Oxanium',sans-serif ;
+            font-size: 10px;
+        }
+
+        /*footer*/
+        footer{
+            position: fixed;
+            width: 100%;
+            height: 15%;
+            bottom: 0;
+            background-color: #af609d;
+            box-shadow: 0 -1px 6px rgba(0,0,0,.6);
+            align-items: center;
+            display: flex;
+            font-family: 'Ribeye Marrow', sans-serif;}
+
+        footer p{
+            width: 100%;
+            text-align: center;
+            color: ghostwhite;
+            font-weight: bold;
+            opacity: .8;
+            font-size: 1rem;
+        }
+    }
+
     
-.cards{
-    display:flex;
-    justify-content: space-evenly;
-    padding-bottom: 3%;}
-    
-.cards .card{
-    background: #4d0686;
-    display: flex;
-    width: 46%;
-    height: 200px;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 5px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.6);}
 
-.cards .card img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px solid white;
-    display: block;}
-
-.cards .card > .texto-card{
-    width: 60%;
-    padding-bottom: 1.5rem;
-    font-family: 'Oxanium',sans-serif ;}
-
-/*footer*/
-footer{
-    width: 100%;
-    height: 15%;
-    bottom: 0;
-    background-color: #af609d;
-    box-shadow: 0 -1px 6px rgba(0,0,0,.6);
-    align-items: center;
-    display: flex;}
-
-footer p{
-    width: 100%;
-    text-align: center;
-    color: ghostwhite;
-    font-weight: bold;
-    opacity: .8;
-    font-size: 1rem;}
