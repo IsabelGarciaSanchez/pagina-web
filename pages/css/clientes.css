@@ -170,7 +170,7 @@ html, body {
         .clientes{
             height: 100%;
         }
-        
+
         .cards{
             display:inline-block;
             align-content: center;
@@ -184,7 +184,7 @@ html, body {
             margin: 10px auto;
             background: #4d0686;
             display: flex;
-            width: 70%;
+            width: 60%;
             height: 175px;
             align-items: center;
             justify-content: space-evenly;
